@@ -4,7 +4,7 @@ A ~~Windows only~~ cross-platform CLI tool for encrypting and decrypting Cookie 
 
 Place this executable in a folder and run with the appropriate commands. It will run through all files within the current folder (that fit the search pattern if provided) and convert them.  Decrypted files will be output with a `.bin` extension and encrypted with a `.djb` extension.
 
-**NOTE** this tool will attempt to run on all files within a folder and does not validate if each files needs to or can be converted so will crash on invalid files. Additionally, output files will overwrite files of the same name.
+**NOTE** this tool will attempt to run on all files within a folder ~~and does not validate if each files needs to or can be converted so will crash on invalid files. Additionally, output files will overwrite files of the same name.~~ and output as `.bin` if `-o/--output` not given
 
 `python cookie_run_djbf_converter.py -m decrypt -k kakao -i Game.djb`  
 `python cookie_run_djbf_converter.py -m encrypt -k kakao -v 1 -f "AES_ECB, FastLZ" -i Game.djb`
