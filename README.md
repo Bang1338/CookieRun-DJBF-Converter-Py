@@ -1,23 +1,28 @@
-# CookieRun DJBF Converter
+# CookieRun DJBF Converter - Python Version
 
-A Windows only CLI tool for encrypting and decrypting Cookie Run's DJBF files. 
+A ~~Windows only~~ cross-platform CLI tool for encrypting and decrypting Cookie Run Kakao/QQ's DJBF files. 
 
 Place this executable in a folder and run with the appropriate commands. It will run through all files within the current folder (that fit the search pattern if provided) and convert them.  Decrypted files will be output with a `.bin` extension and encrypted with a `.djb` extension.
 
 **NOTE** this tool will attempt to run on all files within a folder and does not validate if each files needs to or can be converted so will crash on invalid files. Additionally, output files will overwrite files of the same name.
 
-`.\CookieRunDJBFConverter.exe -m decrypt -k kakao`  
-`.\CookieRunDJBFConverter.exe -m encrypt -k kakao -v 1 -f "AES_ECB, FastLZ"`
+`python cookie_run_djbf_converter.py -m decrypt -k kakao -i Game.djb`  
+`python cookie_run_djbf_converter.py -m encrypt -k kakao -v 1 -f "AES_ECB, FastLZ" -i Game.djb`
 
 #### Arguments
 | Short Name | Long Name | Description | Required
 | ---- | ---- | ---- | :---- |
+| -i | \--input | Input file | Yes
+| -o | \--output | Output file | No
 | -m | \--mode | Encrypt or Decrypt | Yes
 | -k | \--key | Encryption key to use. Kakao or QQ | Yes
+|    | \--keyfile | Custom Encryption key to use. Self-made. | No, but give it a try :)
+|    | \--ignore-checksum | Ignore checksum verification error. | No, send issues only.
+| -d | \--debug | Enable debug output. | No, send issues only.
 | -v | \--version | Output file minor version. 0, 1, 2 or 3 | When Encrypting
 | -f | \--flags | Output file encryption and compression methods |  When Encrypting
 | -s | \--searchPattern | Filename filter | No
-| | \--help | Shows this table | |
+| -h | \--help | Shows this table | When you lack of braincells |
 
 #### Version
 
