@@ -11,6 +11,12 @@
 *.suo
 *.user
 *.sln.docstates
+__pycache__
+
+# Cookie Run thing
+*.djb
+*.bin
+*.fail
 
 # Build results
 [Dd]ebug/
