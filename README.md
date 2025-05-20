@@ -41,3 +41,7 @@ When encrypting with multiple flags, the values need to be comma separated e.g. 
 | AES_ECB | 0x1 |AES encryption in ECB mode | 0+
 | AES_CBC | 0x2 | AES encryption in CBC mode | 2+
 | FastLZ | 0x80 |FastLZ - a variant of LZ77 compression   | 1+
+
+#### Issues
+- `-f`/`--flags` didn't pick up multiple flags
+- **LZ77 Encrypt seem to be different since CookieRunDJBFConverter have that same issues, need tester.**
